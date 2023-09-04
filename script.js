@@ -20,18 +20,30 @@ function writePassword() {
   var lowercaseIncluded = window.prompt("Should lowercase letters be included?  ('y' for yes or 'n' for no.)");
   if ((lowercaseIncluded !== "y") && (lowercaseIncluded !== "n")) {
     window.alert("Only 'y' or 'n' please!");
+    return;
+  } else {
+    console.log(lowercaseIncluded);
   }
   var uppercaseIncluded = window.prompt("Should uppercase letters be included?  ('y' for yes or 'n' for no.)");
   if ((uppercaseIncluded !== "y") && (uppercaseIncluded !== "n")) {
     window.alert("Only 'y' or 'n' please!");
+    return;
+  } else {
+    console.log(uppercaseIncluded);
   }
   var numericIncluded = window.prompt("Should numeric characters be included?  ('y' for yes or 'n' for no.)");
   if ((numericIncluded !== "y") && (numericIncluded !== "n")) {
     window.alert("Only 'y' or 'n' please!");
+    return;
+  } else {
+    console.log(numericIncluded);
   }
   var specialCharactersIncluded = window.prompt("Should special characters be included?  ('y' for yes or 'n' for no.)");
   if ((specialCharactersIncluded !== "y") && (specialCharactersIncluded !== "n")) {
     window.alert("Only 'y' or 'n' please!");
+    return;
+  } else {
+    console.log(specialCharactersIncluded);
   }
 }
 
