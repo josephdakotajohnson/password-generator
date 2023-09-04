@@ -10,7 +10,29 @@ function writePassword() {
   // var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
-  window.prompt("What should the length of your password be?");
+  var passwordLength = window.prompt("What should the length of your password be?  (Must be between 8 and 128 characters.)");
+  console.log(passwordLength);
+  if (passwordLength <= 7) {
+    window.alert("The password length must be above 7 characters!");
+  } else if (passwordLength >= 129) {
+    window.alert("The password length must be below 129 characters!");
+  }
+  var lowercaseIncluded = window.prompt("Should lowercase letters be included?  ('y' for yes or 'n' for no.)");
+  if ((lowercaseIncluded !== "y") && (lowercaseIncluded !== "n")) {
+    window.alert("Only 'y' or 'n' please!");
+  }
+  var uppercaseIncluded = window.prompt("Should uppercase letters be included?  ('y' for yes or 'n' for no.)");
+  if ((uppercaseIncluded !== "y") && (uppercaseIncluded !== "n")) {
+    window.alert("Only 'y' or 'n' please!");
+  }
+  var numericIncluded = window.prompt("Should numeric characters be included?  ('y' for yes or 'n' for no.)");
+  if ((numericIncluded !== "y") && (numericIncluded !== "n")) {
+    window.alert("Only 'y' or 'n' please!");
+  }
+  var specialCharactersIncluded = window.prompt("Should special characters be included?  ('y' for yes or 'n' for no.)");
+  if ((specialCharactersIncluded !== "y") && (specialCharactersIncluded !== "n")) {
+    window.alert("Only 'y' or 'n' please!");
+  }
 }
 
 // Add event listener to generate button
