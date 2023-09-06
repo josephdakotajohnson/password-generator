@@ -14,7 +14,8 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: #f9fbfd;
+  /* background-color: #f9fbfd; warm tone */
+  background-color: rgb(229, 237, 238); /* cool tone */
 }
 
 .wrapper {

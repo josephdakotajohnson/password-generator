@@ -14,7 +14,7 @@ function generatePassword(){
   }
   var charactersIncluded = []
   var lowercaseIncluded = window.confirm("Should lowercase letters be included?  ('OK' for yes or 'Cancel' for no.)");
-//add lowercase characters to characters included variable
+//add lowercase/uppercase/numeric/special characters to characters included variable
 //if they confirmed, then join
  if (lowercaseIncluded === true) {
   charactersIncluded = charactersIncluded.concat(lowercaseArr)
@@ -32,6 +32,7 @@ function generatePassword(){
     charactersIncluded = charactersIncluded.concat(specialCharactersArr)
   }
 console.log(charactersIncluded)
+//if no characters are included, then invalid
   if ((lowercaseIncluded === false) && (uppercaseIncluded === false) && (numericIncluded === false) && (specialCharactersIncluded === false)) {
     window.alert("The password must have some characters in it!");
     return "Invalid Characters"
@@ -58,3 +59,4 @@ generateBtn.addEventListener("click", writePassword);
 
 
 //what kind of question is it?
+// info given = alert, yes or no = confirm, open ended = prompt
